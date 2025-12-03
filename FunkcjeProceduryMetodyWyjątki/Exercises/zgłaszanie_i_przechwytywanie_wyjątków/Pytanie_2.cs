@@ -1,3 +1,5 @@
+using System;
+
 namespace Funkcje_Procedury_Metody_Wyjątki.Exercises.zgłaszanie_i_przechwytywanie_wyjątków;
 
 public class Pytanie_2
