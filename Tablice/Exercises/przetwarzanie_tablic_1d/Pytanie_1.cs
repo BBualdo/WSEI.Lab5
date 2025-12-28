@@ -1,4 +1,6 @@
-﻿namespace Tablice.Exercises.przetwarzanie_tablic_1d;
+﻿using System;
+
+namespace Tablice.Exercises.przetwarzanie_tablic_1d;
 
 public class Pytanie_1 {
     public static void Print(int[] a, int[] b) {
