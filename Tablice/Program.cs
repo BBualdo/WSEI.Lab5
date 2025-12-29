@@ -1,6 +1,3 @@
-﻿using Tablice.Exercises.przetwarzanie_tablic_1d;
+﻿using Tablice.Exercises.macierze;
 
-int[] a = new int[] {1};
-int[] b = new int[] {2};
-
-Pytanie_3.Print(a, b);
+Pytanie_1.Main([]);
