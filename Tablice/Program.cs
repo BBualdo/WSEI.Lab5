@@ -1,8 +1,3 @@
-﻿using System;
-using Tablice.Exercises.tablica_postrzępiona;
+﻿using Tablice.Exercises.sudoku;
 
-char[][] jagged = Pytanie_1.ReadJaggedArrayFromStdInput();
-Pytanie_1.PrintJaggedArrayToStdOutput(jagged);
-char[][] jaggedTransposed = Pytanie_1.TransposeJaggedArray(jagged);
-Console.WriteLine();
-Pytanie_1.PrintJaggedArrayToStdOutput(jaggedTransposed);
+Pytanie_1.Main([]);
