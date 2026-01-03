@@ -6,6 +6,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FunkcjeProceduryMetodyWyją
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Tablice", "Tablice\Tablice.csproj", "{4EFA04E5-EBD8-49E8-8C7C-A4734884D47B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektowanieKlasy", "ProjektowanieKlasy\ProjektowanieKlasy.csproj", "{63B2206F-587B-438C-AC43-6753E23C9434}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +26,9 @@ Global
 		{4EFA04E5-EBD8-49E8-8C7C-A4734884D47B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4EFA04E5-EBD8-49E8-8C7C-A4734884D47B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4EFA04E5-EBD8-49E8-8C7C-A4734884D47B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63B2206F-587B-438C-AC43-6753E23C9434}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63B2206F-587B-438C-AC43-6753E23C9434}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63B2206F-587B-438C-AC43-6753E23C9434}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63B2206F-587B-438C-AC43-6753E23C9434}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
