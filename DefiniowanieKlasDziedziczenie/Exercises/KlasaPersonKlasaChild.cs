@@ -84,13 +84,11 @@ public class Child : Person {
     public Person Father { get; set; }
     public Person Mother { get; set; }
     
-    public Child(string firstName, string familyName, int age, Person father, Person mother): base(firstName, familyName, age) {
+    public Child(string firstName, string familyName, int age, Person father = null, Person mother = null): base(firstName, familyName, age) {
         Father = father;
         Mother = mother;
     }
     
-    public Child(string firstName, string familyName, int age): base(firstName, familyName, age) {}
-
     public override string ToString() {
         string motherData = "mother: " + (Mother == null ? "No data" : Mother.ToString());
         string fatherData = "father: " + (Father == null ? "No data" : Father.ToString());
