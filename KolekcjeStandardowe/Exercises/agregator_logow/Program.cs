@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 
+namespace KolekcjeStandardowe.Exercises.agregator_logow;
+
 internal class Log {
     public string IPAddress { get; set; }
     public string Username { get; set; }

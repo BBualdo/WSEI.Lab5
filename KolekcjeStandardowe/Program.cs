@@ -1,1 +1,6 @@
-﻿
+﻿using KolekcjeStandardowe.Exercises.kolekcje_simpseq;
+
+int[] a = new int[] {0, 1, 1, 2, 3, 3, 3};;
+int[] b = new int[] {0, 2, 2, 3, 4};
+
+Pytanie_1.Print(a, b);
