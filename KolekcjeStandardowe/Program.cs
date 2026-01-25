@@ -1,6 +1,12 @@
-﻿using KolekcjeStandardowe.Exercises.kolekcje_simpseq;
+﻿using KolekcjeStandardowe.Exercises.analiza_logow;
 
-int[] a = new int[] {-2, -1, 0, 1, 4};
-int[] b = new int[] {-3, -2, -1, 1, 2, 3};
+string logs = """
+              2021-06-10 5:20 mirek 180.40.41.120
+              2021-06-10 10:20 adam 80.40.41.120
+              2021-06-10 10:21 admin 192.168.4.10
+              2021-06-11 8:09 maciek 149.40.53.12
+              2021-06-11 8:10 adam 80.40.41.120
+              2021-06-11 18:10 mirek 180.40.41.120
+              """;
 
-Pytanie_3.Print(a, b);
+Pytanie_1.Analyze(logs);
