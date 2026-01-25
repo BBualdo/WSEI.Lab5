@@ -10,6 +10,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjektowanieKlasy", "Proje
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DefiniowanieKlasDziedziczenie", "DefiniowanieKlasDziedziczenie\DefiniowanieKlasDziedziczenie.csproj", "{B636DE85-8520-47A3-8122-25A7AE998D2D}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "KolekcjeStandardowe", "KolekcjeStandardowe\KolekcjeStandardowe.csproj", "{A05C8F27-8EF4-457A-A243-BAED572C486A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -36,5 +38,9 @@ Global
 		{B636DE85-8520-47A3-8122-25A7AE998D2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B636DE85-8520-47A3-8122-25A7AE998D2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B636DE85-8520-47A3-8122-25A7AE998D2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A05C8F27-8EF4-457A-A243-BAED572C486A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A05C8F27-8EF4-457A-A243-BAED572C486A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A05C8F27-8EF4-457A-A243-BAED572C486A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A05C8F27-8EF4-457A-A243-BAED572C486A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
