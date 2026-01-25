@@ -1,6 +1,6 @@
 ﻿using KolekcjeStandardowe.Exercises.kolekcje_simpseq;
 
-int[] a = new int[] {0, 1, 1, 2, 3, 3, 3};;
-int[] b = new int[] {0, 2, 2, 3, 4};
+int[] a = new int[] {-2, -1, 0, 1, 4};
+int[] b = new int[] {-3, -2, -1, 1, 2, 3};
 
-Pytanie_1.Print(a, b);
+Pytanie_2.Print(a, b);
