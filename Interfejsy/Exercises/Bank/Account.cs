@@ -1,54 +1,47 @@
 ﻿using System;
 
-namespace Bank {
-    public class Account : IAccount {
-        private decimal _balance;
+namespace Bank
+{
+    public class Account : IAccount
+    {
+        protected const int PRECISION = 4;
 
         public string Name { get; }
-        public decimal Balance => Math.Round(_balance, 4);
-        public bool IsBlocked { get; private set; }
+        public decimal Balance { get; private set; }
 
-        public Account(string name, decimal balance = 0) {
-            Name = SetName(name);
-            _balance = SetBalance(balance);
-        }
-    
-        public void Block() {
-            IsBlocked = true;
+
+        public bool IsBlocked { get; private set; } = false;
+        public void Block() => IsBlocked = true;
+        public void Unblock() => IsBlocked = false;
+
+        public Account(string name, decimal initialBalance = 0)
+        {
+            if (name == null || initialBalance < 0)
+                throw new ArgumentOutOfRangeException();
+            Name = name.Trim();
+            if (Name.Length < 3)
+                throw new ArgumentException();
+            Balance = Math.Round(initialBalance, PRECISION);
         }
 
-        public void Unblock() {
-            IsBlocked = false;
-        }
+        public bool Deposit(decimal amount)
+        {
+            if (amount <= 0 || IsBlocked) return false;
 
-        public bool Deposit(decimal amount) {
-            if (IsBlocked || amount <= 0) return false;
-            _balance += amount;
+            Balance = Math.Round(Balance += amount, PRECISION);
             return true;
         }
 
-        public bool Withdrawal(decimal amount) {
-            if (IsBlocked || amount <= 0 || amount > Balance) return false;
-            _balance -= amount;
+        public bool Withdrawal(decimal amount)
+        {
+            if (amount <= 0 || IsBlocked || amount > Balance) return false;
+
+            Balance = Math.Round(Balance -= amount, PRECISION);
             return true;
         }
 
-        public override string ToString() {
-            string result = $"Account name: {Name}, balance: {Balance:F2}";
-            if (IsBlocked) result += ", blocked";
-            return result;
-        }
-
-        private string SetName(string name) {
-            if (string.IsNullOrEmpty(name)) throw new ArgumentOutOfRangeException();
-            name = name.Trim();
-            if (name.Length < 3) throw new ArgumentException();
-            return name;
-        }
-    
-        private decimal SetBalance(decimal balance) {
-            if (balance < 0) throw new ArgumentOutOfRangeException();
-            return balance;
-        }
+        public override string ToString() =>
+            IsBlocked ? $"Account name: {Name}, balance: {Balance:F2}, blocked"
+                : $"Account name: {Name}, balance: {Balance:F2}";
     }
 }
