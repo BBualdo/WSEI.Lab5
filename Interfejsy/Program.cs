@@ -1,31 +1,19 @@
 ﻿using System;
-using Bank;
+using StrukturaStos;
 
-// scenariusz: wpłaty wypłaty, blokada konta
-// utworzenie konta plus z domyslnym limitem 100
-var john = new AccountPlus("John", initialBalance: 100.0m);
-Console.WriteLine(john);
-
-// wypłata - podanie kwoty ujemnej
-john.Withdrawal(-50.0m);
-Console.WriteLine(john);
-
-// wypłata bez wykorzystania debetu
-john.Withdrawal(50.0m);
-Console.WriteLine(john);
-
-// wypłata z wykorzystaniem debetu
-john.Withdrawal(100.0m);
-Console.WriteLine(john);
-
-// konto zablokowane, wypłata niemożliwa
-john.Withdrawal(10.0m);
-Console.WriteLine(john);
-
-// wpłata odblokowująca konto
-john.Deposit(80.0m);
-Console.WriteLine(john);
-
-// wpłata podanie kwoty ujemnej
-john.Deposit(-80.0m);
-Console.WriteLine(john);
+var s = new Stos<string>();
+s.Push("aaa");
+s.Push("bbb");
+s.Push("ccc");
+foreach( var x in s.ToArray() )
+{
+    Console.WriteLine(x);
+}
+Console.WriteLine($"na szczycie jest: {s.Peek}");
+Console.WriteLine($"liczba elementów na stosie: {s.Count}");
+while(!s.IsEmpty)
+{
+    Console.WriteLine( $"zdejmuje: {s.Pop()}");
+}
+if( s.IsEmpty )
+    Console.WriteLine( "stos jest pusty" );
